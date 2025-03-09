@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Online - Tela Inicial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+        h3 {
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+<div class="card p-4" style="width: 100%; max-width: 350px;">
+    <h3 class="text-center mb-4">Bem-vindo à Agenda Online!</h3>
+    <div>
+        <a href="/editar-perfil" class="btn btn-secondary w-100 mt-3">Editar Perfil</a>
+    </div>
+    <div>
+        <a th:href="@{/Contato(usuarioId=${usuarioId})}" class="btn w-100 mt-3" style="background-color: #007bff; color: white;">Cadastrar Contato</a>
+    </div>
+
+    <div>
+        <a th:href="@{/exibirContatos(usuarioId=${usuarioId})}" class="btn btn-success w-100 mt-3">Visualizar Contatos</a>
+    </div>
+
+    <div>
+        <a href="/login" class="btn btn-danger w-100 mt-3">Sair</a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
